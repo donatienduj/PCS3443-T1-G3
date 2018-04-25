@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Janela4.h"
 #include "CaixaDeDialogo.h"
+#include "atendente.h"
 
 /*
 Referência: http://www.visualcplusdotnet.com/visualcplusdotnet21.html
@@ -225,6 +226,7 @@ namespace Project1 {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
 			this->Text = L"Aplicação CLR usando C++";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -256,6 +258,10 @@ private: System::Void bt_validar_Click(System::Object^  sender, System::EventArg
 		this->tb_mensagem->AppendText("\r\nCampo de Senha Vazio");
 		tb_senha->BackColor = System::Drawing::Color::Yellow;
 	}
+	else if ((this->tb_login->Text == "a") && (this -> tb_senha->Text == "a")) {
+		atendente^ caixa = gcnew atendente();
+		caixa->ShowDialog();
+	}
 }
 private: System::Void bt_janela2_Click(System::Object^  sender, System::EventArgs^  e) {
 }
@@ -282,6 +288,8 @@ private: System::Void exCaixaDeDialogoToolStripMenuItem_Click(System::Object^  s
 		this->tb_mensagem->AppendText("\r\n" + caixa->Telefone);
 	}
 
+}
+private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 }
 };
 }

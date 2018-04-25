@@ -99,6 +99,7 @@ namespace Project1 {
 			this->Controls->Add(this->lb_about);
 			this->Name = L"Janela4";
 			this->Text = L"Janela4";
+			this->Load += gcnew System::EventHandler(this, &Janela4::Janela4_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -106,6 +107,8 @@ namespace Project1 {
 #pragma endregion
 	private: System::Void bt_ok_Click(System::Object^  sender, System::EventArgs^  e) {
 		Close();
+	}
+	private: System::Void Janela4_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	};
 }

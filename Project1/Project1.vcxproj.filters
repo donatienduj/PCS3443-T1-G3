@@ -24,6 +24,12 @@
     <ClCompile Include="CaixaDeDialogo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="registrarburaco.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="atendente.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -35,12 +41,21 @@
     <ClInclude Include="CaixaDeDialogo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="registrarburaco.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="atendente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="Janela4.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CaixaDeDialogo.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
