@@ -252,7 +252,7 @@ private: System::Void bt_validar_Click(System::Object^  sender, System::EventArg
 	}
 	else if (this->tb_login->Text == String::Empty) {
 		this->tb_mensagem->AppendText("\r\nCampo de Login Vazio");
-		tb_senha->BackColor = System::Drawing::Color::Yellow;
+		tb_login->BackColor = System::Drawing::Color::Yellow;
 	}
 	else if (this->tb_senha->Text == String::Empty) {
 		this->tb_mensagem->AppendText("\r\nCampo de Senha Vazio");

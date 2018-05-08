@@ -33,6 +33,9 @@
     <ClCompile Include="respondernotificacao.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="confirmacao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -53,6 +56,9 @@
     <ClInclude Include="respondernotificacao.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="confirmacao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
@@ -68,6 +74,9 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="registrarburaco.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="respondernotificacao.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,4 +1,5 @@
 #pragma once
+#include "confirmacao.h"
 
 namespace Project1 {
 
@@ -49,6 +50,7 @@ namespace Project1 {
 	private: System::Windows::Forms::Label^  label5;
 	private: System::Windows::Forms::TextBox^  textBox6;
 	private: System::Windows::Forms::Label^  label6;
+	private: System::Windows::Forms::Button^  button3;
 
 	private:
 		/// <summary>
@@ -77,6 +79,7 @@ namespace Project1 {
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
 			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// textBox2
@@ -104,16 +107,16 @@ namespace Project1 {
 			// 
 			this->button1->Location = System::Drawing::Point(42, 169);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(122, 23);
+			this->button1->Size = System::Drawing::Size(100, 23);
 			this->button1->TabIndex = 4;
-			this->button1->Text = L"Anexar Notificação";
+			this->button1->Text = L"Anexar Imagem";
 			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(318, 169);
+			this->button2->Location = System::Drawing::Point(190, 169);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(123, 23);
+			this->button2->Size = System::Drawing::Size(100, 23);
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"Registrar";
 			this->button2->UseVisualStyleBackColor = true;
@@ -195,11 +198,22 @@ namespace Project1 {
 			this->label6->TabIndex = 14;
 			this->label6->Text = L"Hora";
 			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(341, 169);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(100, 23);
+			this->button3->TabIndex = 15;
+			this->button3->Text = L"Fechar";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &registrarburaco::button3_Click);
+			// 
 			// registrarburaco
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(503, 261);
+			this->ClientSize = System::Drawing::Size(503, 304);
+			this->Controls->Add(this->button3);
 			this->Controls->Add(this->label6);
 			this->Controls->Add(this->textBox6);
 			this->Controls->Add(this->label5);
@@ -225,8 +239,13 @@ namespace Project1 {
 	private: System::Void registrarburaco_Load(System::Object^  sender, System::EventArgs^  e) {
 	}
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		confirmacao^ caixa = gcnew confirmacao();
+		caixa->ShowDialog();
 	}
 private: System::Void label4_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
 }
 };
 }

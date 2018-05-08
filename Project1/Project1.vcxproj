@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClCompile Include="atendente.cpp" />
     <ClCompile Include="CaixaDeDialogo.cpp" />
+    <ClCompile Include="confirmacao.cpp" />
     <ClCompile Include="Janela4.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="registrarburaco.cpp" />
@@ -156,6 +157,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="CaixaDeDialogo.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="confirmacao.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Janela4.h">
@@ -182,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CaixaDeDialogo.resx">
       <DependentUpon>CaixaDeDialogo.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmacao.resx">
+      <DependentUpon>confirmacao.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Janela4.resx">
       <DependentUpon>Janela4.h</DependentUpon>
