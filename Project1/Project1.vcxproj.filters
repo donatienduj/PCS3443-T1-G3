@@ -30,6 +30,9 @@
     <ClCompile Include="atendente.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="respondernotificacao.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -47,6 +50,9 @@
     <ClInclude Include="atendente.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="respondernotificacao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
@@ -56,6 +62,12 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="CaixaDeDialogo.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="atendente.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrarburaco.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>

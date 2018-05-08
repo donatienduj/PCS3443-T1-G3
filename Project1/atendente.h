@@ -1,5 +1,6 @@
 #pragma once
 #include "registrarburaco.h"
+#include "respondernotificacao.h"
 
 namespace Project1 {
 
@@ -40,6 +41,7 @@ namespace Project1 {
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button3;
 
+
 	private:
 		/// <summary>
 		/// Variável de designer necessária.
@@ -76,6 +78,7 @@ namespace Project1 {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Responder Notificação";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &atendente::button2_Click);
 			// 
 			// button3
 			// 
@@ -85,6 +88,7 @@ namespace Project1 {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Logout";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &atendente::button3_Click);
 			// 
 			// atendente
 			// 
@@ -102,6 +106,13 @@ namespace Project1 {
 #pragma endregion
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 		registrarburaco^ caixa = gcnew registrarburaco();
+		caixa->ShowDialog();
+	}
+	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+		Close();
+	}
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		respondernotificacao^ caixa = gcnew respondernotificacao();
 		caixa->ShowDialog();
 	}
 	};

@@ -149,6 +149,7 @@
     <ClCompile Include="Janela4.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="registrarburaco.cpp" />
+    <ClCompile Include="respondernotificacao.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="atendente.h">
@@ -164,6 +165,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="registrarburaco.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="respondernotificacao.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -187,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registrarburaco.resx">
       <DependentUpon>registrarburaco.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="respondernotificacao.resx">
+      <DependentUpon>respondernotificacao.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
