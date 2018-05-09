@@ -147,8 +147,12 @@
     <ClCompile Include="atendente.cpp" />
     <ClCompile Include="CaixaDeDialogo.cpp" />
     <ClCompile Include="confirmacao.cpp" />
+    <ClCompile Include="ConfirmacaoOSS.cpp" />
     <ClCompile Include="Janela4.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="InicioDespachador.cpp" />
+    <ClCompile Include="ObrasMarcadas.cpp" />
+    <ClCompile Include="ObrasPendentes.cpp" />
     <ClCompile Include="registrarburaco.cpp" />
     <ClCompile Include="respondernotificacao.cpp" />
   </ItemGroup>
@@ -162,10 +166,22 @@
     <ClInclude Include="confirmacao.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ConfirmacaoOSS.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Janela4.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MyForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="InicioDespachador.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ObrasMarcadas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ObrasPendentes.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="registrarburaco.h">
@@ -190,11 +206,23 @@
     <EmbeddedResource Include="confirmacao.resx">
       <DependentUpon>confirmacao.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmacaoOSS.resx">
+      <DependentUpon>ConfirmacaoOSS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioDespachador.resx">
+      <DependentUpon>InicioDespachador.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Janela4.resx">
       <DependentUpon>Janela4.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObrasMarcadas.resx">
+      <DependentUpon>ObrasMarcadas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObrasPendentes.resx">
+      <DependentUpon>ObrasPendentes.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registrarburaco.resx">
       <DependentUpon>registrarburaco.h</DependentUpon>

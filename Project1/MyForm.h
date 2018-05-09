@@ -3,6 +3,7 @@
 #include "Janela4.h"
 #include "CaixaDeDialogo.h"
 #include "atendente.h"
+#include "InicioDespachador.h"
 
 /*
 Referência: http://www.visualcplusdotnet.com/visualcplusdotnet21.html
@@ -260,6 +261,10 @@ private: System::Void bt_validar_Click(System::Object^  sender, System::EventArg
 	}
 	else if ((this->tb_login->Text == "a") && (this -> tb_senha->Text == "a")) {
 		atendente^ caixa = gcnew atendente();
+		caixa->ShowDialog();
+	}
+	else if ((this->tb_login->Text == "d") && (this->tb_senha->Text == "d")) {
+		InicioDespachador^ caixa = gcnew InicioDespachador();
 		caixa->ShowDialog();
 	}
 }

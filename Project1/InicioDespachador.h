@@ -1,6 +1,6 @@
 #pragma once
-#include "registrarburaco.h"
-#include "respondernotificacao.h"
+#include "ObrasMarcadas.h"
+#include "ObrasPendentes.h"
 
 namespace Project1 {
 
@@ -12,12 +12,12 @@ namespace Project1 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Sumário para atendente
+	/// Sumário para InicioDespachador
 	/// </summary>
-	public ref class atendente : public System::Windows::Forms::Form
+	public ref class InicioDespachador : public System::Windows::Forms::Form
 	{
 	public:
-		atendente(void)
+		InicioDespachador(void)
 		{
 			InitializeComponent();
 			//
@@ -29,7 +29,7 @@ namespace Project1 {
 		/// <summary>
 		/// Limpar os recursos que estão sendo usados.
 		/// </summary>
-		~atendente()
+		~InicioDespachador()
 		{
 			if (components)
 			{
@@ -40,7 +40,6 @@ namespace Project1 {
 	protected:
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::Button^  button3;
-
 
 	private:
 		/// <summary>
@@ -62,65 +61,61 @@ namespace Project1 {
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(117, 96);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Location = System::Drawing::Point(66, 136);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(131, 98);
+			this->button1->Size = System::Drawing::Size(136, 47);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"Registrar Buraco";
+			this->button1->Text = L"Obras Pendentes";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &atendente::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &InicioDespachador::button1_Click);
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(335, 96);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Location = System::Drawing::Point(66, 52);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(140, 98);
+			this->button2->Size = System::Drawing::Size(136, 47);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"Responder Notificação";
+			this->button2->Text = L"Obras Marcadas";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &atendente::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &InicioDespachador::button2_Click);
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(499, 256);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Location = System::Drawing::Point(195, 218);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(100, 28);
+			this->button3->Size = System::Drawing::Size(94, 36);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Logout";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &atendente::button3_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &InicioDespachador::button3_Click);
 			// 
-			// atendente
+			// InicioDespachador
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(633, 321);
+			this->ClientSize = System::Drawing::Size(301, 266);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->Name = L"atendente";
-			this->Text = L"atendente";
-			this->Load += gcnew System::EventHandler(this, &atendente::atendente_Load);
+			this->Name = L"InicioDespachador";
+			this->Text = L"InicioDespachador";
+			this->Load += gcnew System::EventHandler(this, &InicioDespachador::InicioDespachador_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void InicioDespachador_Load(System::Object^  sender, System::EventArgs^  e) {
+	}
+	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
+		ObrasMarcadas^ caixa = gcnew ObrasMarcadas();
+		caixa->ShowDialog();
+	}
 	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
-		registrarburaco^ caixa = gcnew registrarburaco();
+		ObrasPendentes^ caixa = gcnew ObrasPendentes();
 		caixa->ShowDialog();
 	}
 	private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 		Close();
 	}
-	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
-		respondernotificacao^ caixa = gcnew respondernotificacao();
-		caixa->ShowDialog();
-	}
-	private: System::Void atendente_Load(System::Object^  sender, System::EventArgs^  e) {
-	}
-};
+	};
 }

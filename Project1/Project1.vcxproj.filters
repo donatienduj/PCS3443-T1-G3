@@ -36,6 +36,18 @@
     <ClCompile Include="confirmacao.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="InicioDespachador.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObrasMarcadas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObrasPendentes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfirmacaoOSS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -59,6 +71,18 @@
     <ClInclude Include="confirmacao.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="InicioDespachador.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObrasMarcadas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObrasPendentes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfirmacaoOSS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm.resx">
@@ -77,6 +101,18 @@
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
     <EmbeddedResource Include="respondernotificacao.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="confirmacao.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InicioDespachador.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObrasMarcadas.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObrasPendentes.resx">
       <Filter>Resource Files</Filter>
     </EmbeddedResource>
   </ItemGroup>
