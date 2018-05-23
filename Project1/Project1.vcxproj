@@ -146,15 +146,23 @@
   <ItemGroup>
     <ClCompile Include="atendente.cpp" />
     <ClCompile Include="CaixaDeDialogo.cpp" />
+    <ClCompile Include="CloseOSForm.cpp" />
     <ClCompile Include="confirmacao.cpp" />
     <ClCompile Include="ConfirmacaoOSS.cpp" />
+    <ClCompile Include="FinanceiroMain.cpp" />
+    <ClCompile Include="InfoBuraco.cpp" />
     <ClCompile Include="Janela4.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="InicioDespachador.cpp" />
     <ClCompile Include="ObrasMarcadas.cpp" />
     <ClCompile Include="ObrasPendentes.cpp" />
+    <ClCompile Include="RegionalMF.cpp" />
+    <ClCompile Include="RegionalMH.cpp" />
+    <ClCompile Include="RegionalMR.cpp" />
     <ClCompile Include="registrarburaco.cpp" />
     <ClCompile Include="respondernotificacao.cpp" />
+    <ClCompile Include="TeamChefExitsList.cpp" />
+    <ClCompile Include="TeamChefMainForm.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="atendente.h">
@@ -163,10 +171,19 @@
     <ClInclude Include="CaixaDeDialogo.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CloseOSForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="confirmacao.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ConfirmacaoOSS.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FinanceiroMain.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="InfoBuraco.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Janela4.h">
@@ -184,10 +201,25 @@
     <ClInclude Include="ObrasPendentes.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="RegionalMF.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="RegionalMH.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="RegionalMR.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="registrarburaco.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="respondernotificacao.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TeamChefExitsList.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TeamChefMainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -203,11 +235,20 @@
     <EmbeddedResource Include="CaixaDeDialogo.resx">
       <DependentUpon>CaixaDeDialogo.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CloseOSForm.resx">
+      <DependentUpon>CloseOSForm.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="confirmacao.resx">
       <DependentUpon>confirmacao.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmacaoOSS.resx">
       <DependentUpon>ConfirmacaoOSS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceiroMain.resx">
+      <DependentUpon>FinanceiroMain.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoBuraco.resx">
+      <DependentUpon>InfoBuraco.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InicioDespachador.resx">
       <DependentUpon>InicioDespachador.h</DependentUpon>
@@ -224,11 +265,26 @@
     <EmbeddedResource Include="ObrasPendentes.resx">
       <DependentUpon>ObrasPendentes.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RegionalMF.resx">
+      <DependentUpon>RegionalMF.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegionalMH.resx">
+      <DependentUpon>RegionalMH.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegionalMR.resx">
+      <DependentUpon>RegionalMR.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="registrarburaco.resx">
       <DependentUpon>registrarburaco.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="respondernotificacao.resx">
       <DependentUpon>respondernotificacao.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamChefExitsList.resx">
+      <DependentUpon>TeamChefExitsList.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeamChefMainForm.resx">
+      <DependentUpon>TeamChefMainForm.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

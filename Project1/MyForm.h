@@ -4,6 +4,9 @@
 #include "CaixaDeDialogo.h"
 #include "atendente.h"
 #include "InicioDespachador.h"
+#include "TeamChefMainForm.h"
+#include "RegionalMH.h"
+#include "FinanceiroMain.h"
 
 /*
 Referência: http://www.visualcplusdotnet.com/visualcplusdotnet21.html
@@ -265,6 +268,18 @@ private: System::Void bt_validar_Click(System::Object^  sender, System::EventArg
 	}
 	else if ((this->tb_login->Text == "d") && (this->tb_senha->Text == "d")) {
 		InicioDespachador^ caixa = gcnew InicioDespachador();
+		caixa->ShowDialog();
+	}
+	else if ((this->tb_login->Text == "f") && (this->tb_senha->Text == "f")) {
+		FinanceiroMain^ caixa = gcnew FinanceiroMain();
+		caixa->ShowDialog();
+	}
+	else if ((this->tb_login->Text == "r") && (this->tb_senha->Text == "r")) {
+		RegionalMH^ caixa = gcnew RegionalMH();
+		caixa->ShowDialog();
+	}
+	else if ((this->tb_login->Text == "c") && (this->tb_senha->Text == "c")) {
+		TeamChefMainForm^ caixa = gcnew TeamChefMainForm();
 		caixa->ShowDialog();
 	}
 }
