@@ -1,5 +1,9 @@
 #pragma once
 
+#include "ControllerOS.h"
+#include <msclr\marshal_cppstd.h>
+
+
 namespace Project1 {
 
 	using namespace System;
@@ -21,6 +25,38 @@ namespace Project1 {
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+		property String^ OSNumber {
+			String^ get() {
+				return OSNumbertextBox->Text;
+			}
+			void set(String^ osnumber) {
+				OSNumbertextBox->Text = osnumber;
+			}
+		}
+		property String^ Hours {
+			String^ get() {
+				return HoursTextBox->Text;
+			}
+			void set(String^ hours) {
+				HoursTextBox->Text = hours;
+			}
+		}
+		property String^ Material {
+			String^ get() {
+				return MaterialTextBox->Text;
+			}
+			void set(String^ material) {
+				MaterialTextBox->Text = material;
+			}
+		}
+		property String^ EndDate {
+			String^ get() {
+				return dateTimePicker1->Text;
+			}
+			void set(String^ enddate) {
+				dateTimePicker1->Text = enddate;
+			}
 		}
 
 	protected:
@@ -131,6 +167,7 @@ namespace Project1 {
 			this->button1->TabIndex = 6;
 			this->button1->Text = L"Validar a Finalizaçao";
 			this->button1->UseVisualStyleBackColor = true;
+			this->button1->Click += gcnew System::EventHandler(this, &CloseOSForm::button1_Click);
 			// 
 			// OSNumbertextBox
 			// 
@@ -175,5 +212,50 @@ namespace Project1 {
 
 		}
 #pragma endregion
+	private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
+		// Validar a finalisaçao do OS
+		if ((this->OSNumber == String::Empty) && (this->Material == String::Empty) && (this->Hours == String::Empty)) {
+			this->OSNumbertextBox->BackColor = System::Drawing::Color::Yellow;
+			this->MaterialTextBox->BackColor = System::Drawing::Color::Yellow;
+			this->HoursTextBox->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if ((this->OSNumber == String::Empty) && (this->Material == String::Empty)) {
+			this->OSNumbertextBox->BackColor = System::Drawing::Color::Yellow;
+			this->MaterialTextBox->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if ((this->OSNumber == String::Empty) && (this->Hours == String::Empty)) {
+			this->OSNumbertextBox->BackColor = System::Drawing::Color::Yellow;
+			this->HoursTextBox->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if ((this->Material == String::Empty) && (this->Hours == String::Empty)) {
+			this->MaterialTextBox->BackColor = System::Drawing::Color::Yellow;
+			this->HoursTextBox->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if (this->OSNumber == String::Empty) {
+			this->OSNumbertextBox->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if (this->Material == String::Empty) {
+			this->MaterialTextBox->BackColor = System::Drawing::Color::Yellow;
+		}
+		else if (this->Hours == String::Empty) {
+			this->HoursTextBox->BackColor = System::Drawing::Color::Yellow;
+		}
+		else {
+
+			ControllerOS* controllerOS = new ControllerOS();
+			int osnumber = std::stoi(msclr::interop::marshal_as<std::string>(this->OSNumber));
+			std::string material = msclr::interop::marshal_as<std::string>(this->Material);
+			int hours = std::stoi(msclr::interop::marshal_as<std::string>(this->Hours));
+			std::string enddate = msclr::interop::marshal_as<std::string>(this->EndDate);
+			bool responseController = new bool;
+			responseController = controllerOS->closeOS(osnumber, material, hours, enddate);
+			if (responseController == true) {
+				this->Hide();
+			}
+
+		}
+
+
+	}
 	};
 }

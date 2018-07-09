@@ -8,6 +8,8 @@
 #include "RegionalMH.h"
 #include "FinanceiroMain.h"
 
+#include "ControllerOS.h"
+
 /*
 Referência: http://www.visualcplusdotnet.com/visualcplusdotnet21.html
 */
@@ -32,6 +34,16 @@ namespace Project1 {
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+		property String^ login {
+			String^ get() {
+				return tb_login->Text;
+			}
+		}
+		property String^ senha {
+			String^ get() {
+				return tb_senha->Text;
+			}
 		}
 
 	protected:
@@ -262,25 +274,31 @@ private: System::Void bt_validar_Click(System::Object^  sender, System::EventArg
 		this->tb_mensagem->AppendText("\r\nCampo de Senha Vazio");
 		tb_senha->BackColor = System::Drawing::Color::Yellow;
 	}
-	else if ((this->tb_login->Text == "a") && (this -> tb_senha->Text == "a")) {
-		atendente^ caixa = gcnew atendente();
-		caixa->ShowDialog();
-	}
-	else if ((this->tb_login->Text == "d") && (this->tb_senha->Text == "d")) {
-		InicioDespachador^ caixa = gcnew InicioDespachador();
-		caixa->ShowDialog();
-	}
-	else if ((this->tb_login->Text == "f") && (this->tb_senha->Text == "f")) {
-		FinanceiroMain^ caixa = gcnew FinanceiroMain();
-		caixa->ShowDialog();
-	}
-	else if ((this->tb_login->Text == "r") && (this->tb_senha->Text == "r")) {
-		RegionalMH^ caixa = gcnew RegionalMH();
-		caixa->ShowDialog();
-	}
-	else if ((this->tb_login->Text == "c") && (this->tb_senha->Text == "c")) {
-		TeamChefMainForm^ caixa = gcnew TeamChefMainForm();
-		caixa->ShowDialog();
+	else {
+		ControllerOS* controlleros = new ControllerOS();
+		std::string login = msclr::interop::marshal_as<std::string>(this->login);
+		std::string senha = msclr::interop::marshal_as<std::string>(this->senha);
+		std::string cargo = controlleros->getCargoByLoginSenha(login, senha);
+		if (cargo == "Chefe") {
+			TeamChefMainForm^ caixa = gcnew TeamChefMainForm();
+			caixa->ShowDialog();
+		}
+		else if(cargo == "Atendente") {
+			atendente^ caixa = gcnew atendente();
+			caixa->ShowDialog();
+		}
+		else if (cargo == "Despachador") {
+			InicioDespachador^ caixa = gcnew InicioDespachador();
+			caixa->ShowDialog();
+		}
+		else if (cargo == "Financeiro") {
+			FinanceiroMain^ caixa = gcnew FinanceiroMain();
+			caixa->ShowDialog();
+		}
+		else if (cargo == "Regional") {
+			RegionalMH^ caixa = gcnew RegionalMH();
+			caixa->ShowDialog();
+		}
 	}
 }
 private: System::Void bt_janela2_Click(System::Object^  sender, System::EventArgs^  e) {

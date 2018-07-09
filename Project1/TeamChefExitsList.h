@@ -55,7 +55,7 @@ namespace Project1 {
 
 	private:
 		/// <summary>
-		/// Required designer variable.
+		/// Required designer variablef
 		/// </summary>
 		System::ComponentModel::Container ^components;
 

@@ -104,12 +104,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\donat\source\repos\mysql-connector-c++-8.0.11-windows-x86-64bit\include\jdbc;C:\Users\donat\source\repos\boost_1_67_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>mysqlcppconn.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
-      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\donat\source\repos\mysql-connector-c++-8.0.11-windows-x86-64bit\lib64\vs14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -144,18 +145,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AssociacaoOSEquipamentoDAO.cpp" />
     <ClCompile Include="atendente.cpp" />
+    <ClCompile Include="Buraco.cpp" />
+    <ClCompile Include="BuracoDAO.cpp" />
     <ClCompile Include="CaixaDeDialogo.cpp" />
+    <ClCompile Include="CidadaoDAO.cpp" />
     <ClCompile Include="CloseOSForm.cpp" />
     <ClCompile Include="confirmacao.cpp" />
     <ClCompile Include="ConfirmacaoOSS.cpp" />
+    <ClCompile Include="ControllerOS.cpp" />
+    <ClCompile Include="CRUDEquipe.cpp" />
+    <ClCompile Include="CRUD_Equipamento.cpp" />
+    <ClCompile Include="CRUD_Material.cpp" />
+    <ClCompile Include="EquipamentoDAO.cpp" />
+    <ClCompile Include="EquipeDAO.cpp" />
     <ClCompile Include="FinanceiroMain.cpp" />
     <ClCompile Include="InfoBuraco.cpp" />
     <ClCompile Include="Janela4.cpp" />
+    <ClCompile Include="MaterialDAO.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="InicioDespachador.cpp" />
+    <ClCompile Include="MySQLDAO.cpp" />
+    <ClCompile Include="NotificacaoDAO.cpp" />
     <ClCompile Include="ObrasMarcadas.cpp" />
     <ClCompile Include="ObrasPendentes.cpp" />
+    <ClCompile Include="Ordem_de_Saida.cpp" />
+    <ClCompile Include="Ordem_de_SaidaDAO.cpp" />
+    <ClCompile Include="Ordem_de_Servico.cpp" />
+    <ClCompile Include="Ordem_de_ServicoDAO.cpp" />
     <ClCompile Include="RegionalMF.cpp" />
     <ClCompile Include="RegionalMH.cpp" />
     <ClCompile Include="RegionalMR.cpp" />
@@ -163,14 +181,19 @@
     <ClCompile Include="respondernotificacao.cpp" />
     <ClCompile Include="TeamChefExitsList.cpp" />
     <ClCompile Include="TeamChefMainForm.cpp" />
+    <ClCompile Include="UsuarioDAO.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AssociacaoOSEquipamentoDAO.h" />
     <ClInclude Include="atendente.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Buraco.h" />
+    <ClInclude Include="BuracoDAO.h" />
     <ClInclude Include="CaixaDeDialogo.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="CidadaoDAO.h" />
     <ClInclude Include="CloseOSForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -180,6 +203,18 @@
     <ClInclude Include="ConfirmacaoOSS.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="ControllerOS.h" />
+    <ClInclude Include="CRUDEquipe.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CRUD_Equipamento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CRUD_Material.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="EquipamentoDAO.h" />
+    <ClInclude Include="EquipeDAO.h" />
     <ClInclude Include="FinanceiroMain.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -189,18 +224,25 @@
     <ClInclude Include="Janela4.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MaterialDAO.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="InicioDespachador.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MySQLDAO.h" />
+    <ClInclude Include="NotificacaoDAO.h" />
     <ClInclude Include="ObrasMarcadas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ObrasPendentes.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Ordem_de_Saida.h" />
+    <ClInclude Include="Ordem_de_SaidaDAO.h" />
+    <ClInclude Include="Ordem_de_Servico.h" />
+    <ClInclude Include="Ordem_de_ServicoDAO.h" />
     <ClInclude Include="RegionalMF.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -222,6 +264,7 @@
     <ClInclude Include="TeamChefMainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="UsuarioDAO.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\dados\dados.vcxproj">
@@ -243,6 +286,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConfirmacaoOSS.resx">
       <DependentUpon>ConfirmacaoOSS.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUDEquipe.resx">
+      <DependentUpon>CRUDEquipe.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Equipamento.resx">
+      <DependentUpon>CRUD_Equipamento.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Material.resx">
+      <DependentUpon>CRUD_Material.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FinanceiroMain.resx">
       <DependentUpon>FinanceiroMain.h</DependentUpon>
